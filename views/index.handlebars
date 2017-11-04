@@ -1,0 +1,54 @@
+
+<div class = "container">
+	<div class = "jumbotron">
+		<div class = "text-center">
+			<h1>GoodBurger</h1>
+			<img src = "https://content.internetvideoarchive.com/content/photos/170/7166_018.jpg">
+			<h2> Welcome to GoodBurger, home of the good burger, may I take your order? </h2>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-offset-3 col-md-3">
+			<form>
+				{{#each data}}
+				 	{{#unless this.eaten}}
+				 	<button type = "button"  class = "btn btn-primary change-burger" id = "{{this.id}}">
+				 	{{this.id}}. {{this.burger}}  -- Eat this burger!
+				 	</button>
+				 	{{/unless}}
+			 	{{/each}}
+		 	</form>
+	 	</div>
+
+
+	 	<div class = "com-md-offset-3 col-md-3">
+			<div class = "eaten-burgers">
+				{{#each data}}
+					{{#if this.eaten}}
+						<button type = " " class = "btn btn-danger">
+							{{this.id}}. {{this.burger}} -- Burger is Eaten!
+						</button>
+					{{/if}}
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class = "container">
+	<div class = "row">
+		<div class = "col-md-6 col-md-offset-3"
+			<h2> Create New Burger </h2>
+				<form>
+					<div class = "form-group">
+						<label for="burger-input">Create your own burger</label>
+						<input type= "text" class = "form-control" id = "burger-input">
+					</div>
+					<button type="submit" id = "burger-button" class="btn btn-primary">Add Burger</button>
+				</form>
+		</div>
+	</div>
+</div>
+
+
