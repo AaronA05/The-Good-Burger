@@ -1,6 +1,6 @@
 var express = require("express");
 var mysql = require("mysql");
-var bodyParser = require("body-Parser");
+var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var path = require("path");
 
